@@ -15,7 +15,7 @@ def pkgconfig(*packages, **kw):
     
     env = os.environ.copy()
     kw = {}
-    for key, value in flag_map.iteritems():
+    for key, value in flag_map.items():
         kw[value] = []
 
     command = ['pkg-config', '--libs', '--cflags', ' '.join(packages)]
