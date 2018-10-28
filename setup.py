@@ -29,7 +29,7 @@ def pkgconfig(*packages, **kw):
             value = token
         
         kw.setdefault(arg, []).append(value)
-    for key, value in kw.iteritems(): # remove duplicated
+    for key, value in kw.items(): # remove duplicated
         kw[key] = list(set(value))
     return kw
 
